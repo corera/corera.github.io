@@ -1,0 +1,9 @@
+{
+  "name": "Black_Belt",
+  "description": "Black Belt Exam on MEAN stack",
+  "dependencies": {
+    "body-parser": "*",
+    "express": "*",
+    "mongoose": "*"
+  }
+}

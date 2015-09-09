@@ -1,0 +1,70 @@
+<div ng-controller="myAppController">
+	<div>
+		<div>
+			<h2 ng-bind="question.question"></h2>
+			<h5 ng-bind="question.description"></h5>
+		</div>
+	</div>
+	<hr />
+	<div>
+		<div>
+			<label>Answer*</label>
+		</div>
+		<div>
+			<textarea class="form-control" rows="3" ng-model="newAnswer.answer" placeholder="What is your answer?"></textarea>
+		</div>
+	</div>
+	<div>
+		<div>
+			<label>Why? (optional)</label>
+		</div>
+		<div>
+			<textarea class="form-control" rows="3" ng-model="newAnswer.description" placeholder="Supporting explanation for your answer"></textarea>
+		</div>
+	</div>
+	<div>
+		<div ng-show="isError">
+			<ul class="error">
+				<li ng-repeat="error in errors" ng-bind="error.error"></li>
+			<ul>
+		</div>
+	</div>
+	<div>
+		<div>
+			<a href="#/question/{{params}}">
+				<button class="btn btn-danger">Cancel</button>
+			</a>
+			<button ng-click="createAnswer(newAnswer)" class="btn btn-success">Submit</button>
+		</div>
+	</div>
+
+	<hr />
+
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th></th>
+				<th>Answers</th>
+				<th>Details</th>
+				<th>Votes</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="answer in answers | orderBy: predicate" class="test">
+				<td ng-bind="answer.user"></td>
+				<td ng-bind="answer.answer"></td>
+				<td ng-bind="answer.description" style="font-style:italic"></td>
+				<td><button ng-click="updateLike(answer)" class="btn btn-info"><span class="fa fa-thumbs-up"> | {{answer.like}}</span></button></td>
+			</tr>
+		</tbody>
+	</table>
+
+
+
+
+
+
+
+<div>
+
