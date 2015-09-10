@@ -1,0 +1,33 @@
+*{
+	font-family: 'Nunito', sans-serif, fontawesome;
+}
+
+.error {
+	color: red;
+	font-weight: bold;
+	list-style-type: none;
+}
+
+textarea.form-control {
+	margin-bottom: 20px;
+}
+
+tbody td, td span{
+	font-family: 'Tinos', serif;
+}
+	td em{
+		font-size: 0.8em;
+	}
+
+tr th:nth-child(n+2){
+	text-align: center;
+}
+
+.nAnswer{
+	text-align: center;
+}
+
+nav.navbar.navbar-default{
+	border-top-color: #23527c;
+	border-top-width: 3px;
+}

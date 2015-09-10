@@ -1,0 +1,9 @@
+{
+  "name": "Corera",
+  "description": "Simple Q&A: inspired by Quora",
+  "dependencies": {
+    "body-parser": "*",
+    "express": "*",
+    "mongoose": "*"
+  }
+}

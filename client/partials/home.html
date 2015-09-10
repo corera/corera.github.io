@@ -1,0 +1,21 @@
+<div ng-controller="myAppController">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Topics</th>
+				<th>Answers</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="question in questions | filter: search | orderBy: predicate">
+				<td><a href="#/question/{{question._id}}" ng-bind="question.question"></a></td>
+				<td ng-bind="question.answers.length" class="nAnswer"></td>
+				<td>
+					<a type="button" href="#/question/{{question._id}}" class="btn btn-primary">Show</a>
+					<a type="button" href="#/question/{{question._id}}/new_answer" class="btn btn-success">Answer</a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

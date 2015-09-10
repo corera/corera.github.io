@@ -1,0 +1,22 @@
+<div ng-controller="myAppController">
+	<h2 ng-bind="question.question"></h2>
+	<h5 ng-bind="question.description"></h5>
+	<a href="#/question/{{question._id}}/new_answer"><button class="btn btn-success">Got an answer?</button></a>
+	<hr />
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Answers</th>
+				<th>Popularity</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="answer in answers | orderBy: predicate">
+				<!-- <td ng-bind="answer.user"></td> -->
+				<!-- <td ng-bind="answer.answer"></td> -->
+				<td><span ng-bind="answer.answer"></span> <br> <em><span ng-bind="answer.description"></span></em></td>
+				<td><button ng-click="updateLike(answer)" class="btn btn-info"><span class="fa fa-thumbs-up"> | {{answer.like}}</span></button></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
