@@ -1,6 +1,6 @@
 {
-  "name": "Black_Belt",
-  "description": "Black Belt Exam on MEAN stack",
+  "name": "Corera",
+  "description": "Simple Q&A: inspired by Quora",
   "dependencies": {
     "body-parser": "*",
     "express": "*",
